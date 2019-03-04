@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d775669e895c4cec99664d44580821ff" Name="Diagram1">
+        <EntityTypeShape EntityType="DATHModel.CaHoc" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.ChucVu" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.HocKy" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.HocPhan" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.Khoa" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.LichDay" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.Lop" Width="1.5" PointX="8.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.LopMonHoc" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.NamHoc" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.NguoiDung" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.SinhVien" Width="1.5" PointX="10.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATHModel.sysdiagram" Width="1.5" PointX="7.75" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="DATHModel.FK__LichDay__id_caho__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="DATHModel.FK__NguoiDung__id_ch__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="DATHModel.FK__HocKy__id_namhoc__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="DATHModel.FK__LopMonHoc__id_ho__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="DATHModel.FK__LopMonHoc__id_ho__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="DATHModel.FK__Lop__id_khoa__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="DATHModel.FK__LichDay__id_lopm__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="DATHModel.FK__SinhVien__id_lop__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="DATHModel.FK__LopMonHoc__id_ng__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="DATHModel.SinhVien_LopMonHoc" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
