@@ -12,10 +12,9 @@ namespace DoAnTongHop
         {
             // Web API configuration and services
 
+            config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();
-            config.Formatters.JsonFormatter.SupportedMediaTypes
-           .Add(new MediaTypeHeaderValue("text/html"));
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{action}/{id}",

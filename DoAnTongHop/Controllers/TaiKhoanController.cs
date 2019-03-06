@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
+using System.Web.Http.Cors;
 
 namespace DoAnTongHop.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+
     public class TaiKhoanController : ApiController
     {
         private DATHEntities _db;
@@ -16,7 +18,7 @@ namespace DoAnTongHop.Controllers
         {
             this._db = new DATHEntities();
         }
-        [System.Web.Http.HttpPost]
+        [HttpPost]
         public IHttpActionResult Login(LoginModel model)
         {
             ErrorsModel errors = new ErrorsModel();
@@ -35,13 +37,26 @@ namespace DoAnTongHop.Controllers
             else
             {
                 var result = _db.NguoiDungs.FirstOrDefault(user => user.mataikhoan == model.taikhoan && user.matkhau == model.matkhau);
+               
                 if ( result != null)
                 {
-                    return Ok("1");
+                    var md = new TaiKhoanModel()
+                    {
+                        id = result.id,
+                        mataikhoan = result.mataikhoan,
+                        tennguoidung = result.tennguoidung,
+                        matkhau = result.matkhau,
+                        hovaten = result.hovaten,
+                        sdt = result.sdt,
+                        email = result.email,
+                        hinhdaidien = result.hinhdaidien,
+                        id_chucvu = result.id_chucvu
+                    };
+                    return Ok(md);
                 }
                 else
                 {
-                    return Ok("-1");
+                    return Ok();
                 }
                 
             }

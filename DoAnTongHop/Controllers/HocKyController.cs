@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Mvc;
 
 namespace DoAnTongHop.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class HocKyController : ApiController
     {
         private DATHEntities _db = new DATHEntities();
@@ -16,6 +18,12 @@ namespace DoAnTongHop.Controllers
         {
 
         }
+        [System.Web.Http.HttpGet]
+        public IHttpActionResult test()
+        {
+            return Ok("test");
+        }
+        [System.Web.Http.HttpGet]
         public IHttpActionResult LayTatCa()
         {
             ErrorsModel errors = new ErrorsModel();
